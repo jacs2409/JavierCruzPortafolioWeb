@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Equipo de Futbol</title>
+	<style type="text/css">
+		:root{
+			--beige-bg: beige;
+		}
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		body{
+			background-color: var(--beige-bg);
+			padding-top: 20px;
+		}
+		h1{
+			font-size: 50px;
+		}
+		input, select{
+			height: 40px;
+			width: 400px;
+			font-size: 20px;
+		}
+		label{
+			font-size: 25px;
+		}
+		form{
+			padding-top: 20px;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+	<main id="main" class="formulario">
+		<center>
+			<h1>Inscripción Equipo de Futbol</h1>
+			<form autocomplete="off">
+				<div>
+					<label for="Carnet">Carnet: </label>
+					<input type="text" name="Carnet" required placeholder="Ingrese carnet del jugador"><br><br>
+				</div>
+				<div>
+					<label for="Nombre">Nombre: </label>
+					<input type="text" name="Nombre" required placeholder="Ingrese nombre del jugador"><br><br>
+				</div>
+				<div>
+					<label for="Edad">Edad: </label>
+					<input type="number" name="Edad" placeholder="Ingrese edad del jugador" min="18"><br><br>
+				</div>
+				<div>
+					<label for="Curso">Curso: </label>
+					<input type="text" name="Curso" placeholder="Ingrese curso al que pertenece el jugador"><br><br>
+				</div>
+				<div>
+					<label for="NombreEquipo">Seleccione el equipo: </label>
+					<select name="NombreEquipo" size="1">
+						<option value="Arsenal">Arsenal</option>
+						<option value="Barcelona">Barcelona</option>
+						<option value="RealMadrid">Real Madrid</option>
+					</select><br><br>
+				</div>
+				<div>
+					<label for="AñoNacimiento">Año de Nacimiento: </label>
+					<input type="date" name="AñoNacimiento" max="2010-07-23"><br><br>
+				</div>
+				<div>
+					<label for="Correo">Correo: </label>
+					<input type="email" name="Correo" required placeholder="Ingrese correo electronico del jugador"><br><br>
+				</div>
+				<input type="submit" value="Enviar">
+			</form>
+		</center>
+	</main>
+</body>
+</html>
