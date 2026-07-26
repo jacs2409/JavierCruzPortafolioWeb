@@ -1,0 +1,25 @@
+@import url('Variables.css');
+body{
+    background-color: var(--bg-color);
+}
+header {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--texto-w);
+    font-size: 16px;
+}

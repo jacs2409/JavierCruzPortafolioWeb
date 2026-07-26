@@ -1,0 +1,13 @@
+:root{
+	--texto-w: #F8FAFC;
+	--texto-g: #D4AF37;
+	--bg-color: #050608;
+	--tipografia: 'Poppins', sans-serif;
+	--T-galeria: #161B22;
+	--Borde-Foto: #2563EB;
+}
+*{
+	font-family: var(--tipografia);
+	padding: 0;
+	margin: 0;
+}

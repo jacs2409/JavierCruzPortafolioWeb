@@ -1,0 +1,204 @@
+@import url('Variables.css');
+#inicio{
+	padding-left: 170px;
+	padding-top: 75px;
+	padding-bottom: 150px;
+	h5{
+		color: var(--texto-w);
+		font-size: 20px;
+		padding-bottom: 125px;
+		padding-left: 30px;
+	}
+	h1{
+		color: var(--texto-w);
+		font-size: 100px;
+	}
+	h2{
+		color: var(--texto-g);
+		font-size: 20px;
+	}
+	table th, table td{
+		color: var(--texto-w);
+		padding-top: 20px;
+	}
+}
+
+#acerca{
+	padding-left: 170px;
+	padding-top: 15px;
+	padding-bottom: 150px;
+	h2{
+		color: var(--texto-g);
+		font-size: 80px;
+		padding-bottom: 10px;
+	}
+	p{
+		color: var(--texto-w);
+		padding-right: 500px;
+		padding-bottom: 15px;
+	}
+	h3{
+		color: var(--texto-g);
+		font-size: 30px;
+		padding-bottom: 8px;
+	}
+	ul {
+		color: var(--texto-w);
+	}
+	h4{
+		color: var(--texto-w);
+		padding-top: 10px;
+		padding-bottom: 5px;
+	}
+	.AcercaDesc{
+		color: var(--texto-g);
+		padding-bottom: 5px;
+	}
+}
+
+#proyectos{
+	padding-top: 15px;
+	padding-bottom: 150px;
+	h2{
+		padding-left: 170px;
+		color: var(--texto-g);
+		font-size: 80px;
+		padding-bottom: 10px;
+	}
+	.galeriaP{
+		text-align: center;
+	}
+	.galeriaP article{
+		display: inline-block;
+		margin: 5px;
+		vertical-align: top;
+	}
+	article{
+		width: 300px;
+		height: 400px;
+		margin: 10px; 
+		padding: 10px ;
+		background-color: var(--T-galeria);
+	    border-radius: 15px;
+	    color: var(--texto-w);
+	    text-align: center;
+	}
+	img{
+		display: block;
+		margin: 0 auto;
+		border-radius: 10px;
+	}
+	h3{
+		color: var(--texto-g);
+		font-size: 25px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	h4{
+		font-weight: normal;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	a{
+		text-decoration: none;
+    	color: var(--texto-w);
+    	padding: 8px 15px;
+	   	border-radius: 8px;
+	   	border: 2px solid var(--texto-w);
+	}
+}
+
+#habilidades{
+	padding-left: 170px;
+	padding-top: 15px;
+	padding-bottom: 150px;
+	h2{
+		color: var(--texto-g);
+		font-size: 80px;
+		padding-bottom: 15px;
+	}
+	h3{
+		color: var(--texto-g);
+		font-size: 30px;
+		padding-bottom: 8px;
+	}
+	ul {
+		color: var(--texto-w);
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	li{
+		color: var(--texto-w);
+		padding-bottom: 20px;
+	}
+}
+
+#contacto{
+	padding-top: 15px;
+	padding-bottom: 150px;
+	h2{
+		padding-left: 170px;
+		color: var(--texto-g);
+		font-size: 80px;
+		padding-bottom: 15px;
+	}
+	p{
+		color: var(--texto-w);
+		text-align: center;
+	}
+	.ColumnaD, .ColumnaI{
+		display: inline-block;
+		vertical-align: top; 
+		margin: 35px;
+		text-align: left;
+	}
+	form{
+		text-align: center;
+		label{
+			color: var(--texto-w);
+			font-size: 20px;
+		}
+		input{
+			margin-top: 10px;
+			font-size: 15px;
+			height: 25px;
+			width: 350px;
+		}
+		select{
+			margin-top: 10px;
+			font-size: 15px;
+			height: 25px;
+			width: 350px;
+		}
+		textarea{
+			margin-top: 10px;
+			font-size: 15px;
+			height: 125px;
+			width: 350px;
+		}
+		input[type="submit"]{
+			width: 150px;
+			background-color: var(--texto-g);
+			border-radius: 5px;
+			border: none;
+			display: block;
+			margin: 12px auto 0;
+		}
+	}
+	.BtnCont{
+		text-align: center;
+	}
+	a{
+		background-color: transparent;
+		color: var(--texto-w);
+		display: inline-block;
+		text-align: center;
+		width: 150px;
+		height: 30px;
+		border-radius: 5px;
+		border: 2px solid var(--texto-w);
+		text-decoration: none;
+		line-height: 30px;
+	}
+}
+
