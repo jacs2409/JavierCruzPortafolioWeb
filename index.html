@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
 	<meta charset="utf-8">
-    <meta name=description content="Estudiante de ingeniera de 4to año, Explora mis proyectos recientes, habilidades técnicas y contacta conmigo para trabajar juntos.">
+    <meta name="description" content="Estudiante de ingeniera de 4to año, Explora mis proyectos recientes, habilidades técnicas y contacta conmigo para trabajar juntos.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Javier Cruz | Portafolio Web</title>
 
     <!--Etiequetas Open Graph -->
     <meta property="og:title" content="Javier Cruz | Portafolio Web">
     <meta property="og:description" content="Estudiante de ingeniera de 4to año, Explora mis proyectos recientes, habilidades técnicas y contacta conmigo para trabajar juntos.">
-    <meta property="og:image" content="Imagenes/LogoJavier.png">
+    <meta property="og:image" content="assets/LogoJavier.png">
     <meta property="og:url" content="http://localhost/DesarrolloWeb/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Javier Cruz Portafolio">
@@ -18,35 +18,226 @@
     <!--Iconos y Estilos CSS-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="EstilosCSSPorta/Navbar.css">
-    <link rel="stylesheet" type="text/css" href="EstilosCSSPorta/Index.css">
+    <link rel="stylesheet" type="text/css" href="EstilosCSSPorta/index.css">
     <link rel="stylesheet" type="text/css" href="EstilosCSSPorta/Footer.css">
 </head>
 <body>
     <header>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#acerca">Acerca de mi</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio"><i class="fa-solid fa-house"></i>Inicio</a></li>
+                <li><a href="#proyectos"><i class="fa-solid fa-folder"></i>Proyectos</a></li>
+                <li><a href="#habilidades"><i class="fa-solid fa-brain"></i>Habilidades</a></li>
+                <li><a href="#acerca"><i class="fa-solid fa-user"></i>Acerca de mi</a></li>
+                <li><a href="#contacto"><i class="fa-solid fa-envelope"></i>Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="inicio">
-        <h5>Disponible</h5>
-        <h2>Ingeniero en Sistemas</h2>
-        <h1>Javier Cruz</h1>
-        <table>
-            <tr>
-                <td><i class="fa-solid fa-graduation-cap"></i> Universidad Mariano Gálvez de Guatemala</td>
-            </tr>
-            <tr>
-                <td><i class="fa-solid fa-location-dot"></i> Ciudad de Guatemala</td>
-            </tr>
-        </table>
+        <div class="contenido">
+            <h5><div class="estado"></div> Disponible</h5>
+            <h2>Ingeniero en Sistemas</h2>
+            <h1>Javier Cruz</h1>
+            <table>
+                <tr>
+                    <td><i class="fa-solid fa-graduation-cap"></i> Universidad Mariano Gálvez de Guatemala</td>
+                </tr>
+                <tr>
+                    <td><i class="fa-solid fa-location-dot"></i> Ciudad de Guatemala</td>
+                </tr>
+            </table>
+        </div>
+        <div class="logo">
+            <img src="./assets/LogoJavi.png" alt="Logo de Javier Cruz">
+        </div>
     </main>
+
+    <section id="proyectos">
+        <h2>Mis Proyectos</h2>
+        <div class="galeriaP">
+            <article>
+                <div>
+                    <img class="proy1" src="assets/proyecto1.png" alt="Proyecto 1">
+                </div>
+                <div>
+                    <h3>GymControl</h3>
+                    <p>Sistema para la administración de gimnasios con gestión de alumnos, pagos, membresías y reportes.</p>
+                    <div>
+                        <h4>Herramientas Utilizadas:</h4>
+                        <span>REACT</span><br>
+                        <span>Apps Scripts</span><br>
+                        <span>JavaScript</span><br>
+                    </div><br>
+                    <div class="btns">
+                        <a href="./Proyecto1.html">Ver Proyecto</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </article>
+            <article class="proyecto">
+                <div>
+                    <img class="proy2" src="assets/proyecto2.png" alt="Proyecto 2">
+                </div>
+                <div>
+                    <h3>OptiMedic</h3>
+                    <p>Aplicación de escritorio para la gestión de contabilidad de una clínica óptica.</p>
+                    <div>
+                        <h4>Herramientas Utilizadas:</h4>
+                        <span>C#</span><br>
+                        <span>APIS GOOGLE SHEETS</span><br>
+                        <span>.NET</span><br>
+                    </div><br>
+                    <div class="btns">
+                        <a href="./Proyecto2.html">Ver Proyecto</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div>
+                    <img class="proy2" src="assets/proye3.png" alt="Proyecto 3">
+                </div>
+                <div>
+                    <h3>OptiMedic - Suministros</h3>
+                    <p>Aplicación de escritorio para la gestión de suministros de una clínica óptica.</p>
+                    <div>
+                        <h4>Herramientas Utilizadas:</h4>
+                        <span>C#</span><br>
+                        <span>APIS GOOGLE SHEETS</span><br>
+                        <span>.NET</span><br>
+                    </div><br>
+                    <div class="btns">
+                        <a href="./Proyecto3.html">Ver Proyecto</a>
+                        <a href="#">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section id="habilidades">
+        <h2>Mis Habilidades</h2>
+        <div>
+            <h3>Lenguajes de Programación</h3>
+            <ul>
+                <li>
+                    <div class="fondohabi1"></div>
+                    <img src="./assets/PHP.webp" alt="Logo de PHP">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>PHP</span>
+                </li>
+                <li>
+                    <div class="fondohabi1"></div>
+                    <img src="./assets/CSharp.webp" alt="Logo de C#">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>C#</span>
+                </li>
+                <li>
+                    <div class="fondohabi1"></div>
+                    <img src="./assets/Java.webp" alt="Logo de Java">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>JAVA</span>
+                </li>
+                <li>
+                    <div class="fondohabi1"></div>
+                    <img src="./assets/C++.webp" alt="Logo de C++">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>C++</span>
+                </li>
+                <li>
+                    <div class="fondohabi1"></div>
+                    <img src="./assets/vba.webp" alt="Logo de Visual Basic For Applications">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>VBA</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Desarrollo Web</h3>
+            <ul>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Html.png" alt="Logo de HTML">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>HTML</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Css.png" alt="Logo de CSS3">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>CSS3</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Javascript.png" alt="Logo de JavaScript">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>JavaScript</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Bases de Datos</h3>
+            <ul>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Mysql.webp" alt="Logo de MySQL">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>MySQL</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Sqlserver.webp" alt="Logo de SQL Server">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>SQL Server</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Access.webp" alt="Logo de Microsoft Access">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>Microsoft Access</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Sistemas Operativos</h3>
+            <ul>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Ubuntu.webp" alt="Logo de Ubuntu">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>Ubuntu</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Windows1.png" alt="Logo de Windows">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>Windows</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h3>Herramientas de Office</h3>
+            <ul>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Word.webp" alt="Logo de Microsoft Word">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>Microsoft Word</span>
+                </li>
+                <li>
+                    <div class="fondohabi"></div>
+                    <img src="./assets/Excel.webp" alt="Logo de Microsoft Excel">
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <span>Microsoft Excel</span>
+                </li>
+            </ul>
+        </div>
+    </section>
 
     <section id="acerca">
         <h2>Acerca de mí</h2>
@@ -75,117 +266,6 @@
                 <p class="AcercaDesc">8.º semestre de Ingeniería en Sistemas</p>
             </li>
         </ul>
-    </section>
-
-    <section id="proyectos">
-        <h2>Mis Proyectos</h2>
-        <div class="galeriaP">
-            <article>
-                <div>
-                    <img src="Imagenes/proyecto1.png" alt="Proyecto 1" height="150px" width="150px">
-                </div>
-                <div>
-                    <h3>GymControl</h3>
-                    <p>Sistema para la administración de gimnasios con gestión de alumnos, pagos, membresías y reportes.</p>
-                    <div>
-                        <h4>Herramientas Utilizadas:</h4>
-                        <span>REACT</span><br>
-                        <span>Apps Scripts</span><br>
-                        <span>JavaScript</span><br>
-                    </div><br>
-                    <div>
-                        <a href="Proyecto1.html">Ver Proyecto</a>
-                        <a href="#">GitHub</a>
-                    </div>
-                </div>
-            </article>
-            <article class="proyecto">
-                <div>
-                    <img src="Imagenes/proyecto2.png" alt="Proyecto 2" height="150px" width="250px">
-                </div>
-                <div>
-                    <h3>OptiMedic</h3>
-                    <p>Aplicación de escritorio para la gestión de contabilidad de una clínica óptica.</p>
-                    <div>
-                        <h4>Herramientas Utilizadas:</h4>
-                        <span>C#</span><br>
-                        <span>APIS GOOGLE SHEETS</span><br>
-                        <span>.NET</span><br>
-                    </div><br>
-                    <div>
-                        <a href="Proyecto2.html">Ver Proyecto</a>
-                        <a href="#">GitHub</a>
-                    </div>
-                </div>
-            </article>
-            <article>
-                <div>
-                    <img src="Imagenes/proye3.png" alt="Proyecto 3" height="150px" width="250px">
-                </div>
-                <div>
-                    <h3>OptiMedic - Suministros</h3>
-                    <p>Aplicación de escritorio para la gestión de suministros de una clínica óptica.</p>
-                    <div>
-                        <h4>Herramientas Utilizadas:</h4>
-                        <span>C#</span><br>
-                        <span>APIS GOOGLE SHEETS</span><br>
-                        <span>.NET</span><br>
-                    </div><br>
-                    <div>
-                        <a href="Proyecto3.html">Ver Proyecto</a>
-                        <a href="#">GitHub</a>
-                    </div>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <section id="habilidades">
-        <h2>Mis Habilidades</h2>
-        <div>
-            <h3>Lenguajes de Programación</h3>
-            <ul>
-                <li>PHP</li>
-                <li>C#</li>
-                <li>Java</li>
-                <li>C++</li>
-                <li>VBA</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Desarrollo Web</h3>
-            <ul>
-                <li>HTML5</li>
-                <li>CSS3</li>
-                <li>JavaScript</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Bases de Datos</h3>
-            <ul>
-                <li>MySQL</li>
-                <li>SQL Server</li>
-                <li>Microsoft Access</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Sistemas Operativos</h3>
-            <ul>
-                <li>Ubuntu</li>
-                <li>Windows</li>
-            </ul>
-        </div>
-
-        <div>
-            <h3>Herramientas de Office</h3>
-            <ul>
-                <li>Microsoft Word</li>
-                <li>Microsoft Excel</li>
-            </ul>
-        </div>
     </section>
 
     <section id="contacto">
