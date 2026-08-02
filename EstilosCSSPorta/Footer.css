@@ -1,8 +1,0 @@
-@import url('Variables.css');
-footer{
-	p{
-		color: var(--texto-w);
-		text-align: center;
-		padding-bottom: 75px;
-	}
-}
