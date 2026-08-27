@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica</title>
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <!--
+        <div class="tarjeta">
+            <div class="nombre"></div>
+            <img src="" alt="" class="image">
+        </div>-->
+    </div>
+
+    <script>
+        let $ = (id) => document.querySelector(id);
+
+        async function getDataPokemon(arrayid) {
+            try{
+
+                for(let i=0; i<arrayid.length; i++){
+                    let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${arrayid[i]}`);
+                    let response = await request.json();
+
+                    let tarjeta = `
+                        <div class = "tarjeta">
+                        <div class="nombre">${response.name}</div>
+                        <img src="${response.sprites.front_default}" alt="" class="image">
+                        </div>`;
+                    $(".contenedor").innerHTML += tarjeta;
+                }
+                /*
+                let request = await fetch(""+id);
+                let response = await request.json();
+                let pokemon = response;
+
+                pokemon.name = "Otro Nombre";
+                console.log(response.name);
+                $(".nombre").textContent = pokemon.name;
+                $(".image").src = pokemon.sprites.front_default; */
+            }catch (error){
+                console.error("Se capturo el error: "+error);
+            }
+        }
+        let pokes = [];
+
+        for (let i=0; i<=9; i++){
+            let random = Math.floor(Math.random() * 151) +1;
+            pokes.push(random);
+        }
+
+        getDataPokemon(pokes);
+    </script>
+</body>
+</html>
