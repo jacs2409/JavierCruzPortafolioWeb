@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+<main>
+	<div class="titulo">Hola</div>
+</main>
+</body>
+</html>
+
+<style>
+	*{
+	}
+	main{
+		position: relative;
+		height: 100vh;
+		
+	}
+	html{
+		background-color: blue;
+	}
+	.titulo{
+		position: absolute;
+		left: 0;
+		top: 0;
+		color: white;
+		font-size: 32px;
+		animation: slide 10s ;
+	}
+	@keyframes slide{
+		0%{
+			left: 0;
+			top: 0;
+		}
+		25%{
+			left: 90%;
+			top: 0;
+		}
+		50%{
+			left: 0;
+			top: 90%;
+		}
+		100%{
+			left: 0;
+		}
+	}
+</style>
