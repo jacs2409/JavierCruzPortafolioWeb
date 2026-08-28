@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practica</title>
+    <style>
+        .contenedor{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+        .image {
+        	filter: brightness(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <!--
+        <div class="tarjeta">
+            <div class="nombre"></div>
+            <img src="" alt="" class="image">
+        </div>-->
+    </div>
+
+    <script>
+        let $ = (id) => document.querySelector(id);
+        const contenedor = $(".contenedor");
+        let globalData = [];
+
+        let contI = 0; 
+        let contR = 0; 
+
+        function contar(id){
+        	contR ++;
+        	if (contR > 3){
+        		console.log("Se paso de 3 intentos"); 
+        		$(`#pkm-${id}`).disabled = true; 
+                $(`#btn-${id}`).disabled = true; 
+        		contR = 0; 
+                contI ++; 
+        	}
+        }
+
+        let contA = 0; 
+
+        function validar(id){
+        	globalData.forEach((pokemon, index) => {
+        		if (pokemon.id == id){
+        			if (pokemon.name === $(`#pkm-${id}`).value) {
+	        			console.log("Adivino el pokemon"); 
+	        			$(`#pkm-${id}`).disabled = true; 
+	        			$(`#pkm-${id}`).parentElement.querySelector(".image").style.filter = "brightness(1)";
+                        $(`#btn-${id}`).disabled = true; 
+	        			contA ++;
+                        contI ++; 	    			
+	        		}else {contar(id);} 
+        		}
+        	});
+
+            if (contI == 10){
+                if (contA <= 3){
+                    console.log("Perdiste, Gracias por participar. Aciertos: "+contA); 
+                }else if (contA >= 4 && contA <= 7){
+                    console.log("Casi lo logras, Sigue intentando. Aciertos: "+contA);
+                }else {
+                    console.log("Felicidades, Ganaste. Aciertos: "+contA); 
+                }
+            }
+        	
+        }	
+
+        async function getDataPokemon(arrayid) {
+            try{
+
+                for(let i=0; i<arrayid.length; i++){
+                    let request = await fetch(`https://pokeapi.co/api/v2/pokemon/${arrayid[i]}`);
+                    let response = await request.json();
+
+                    let tarjeta = `
+                        <div class = "tarjeta">
+                        <div class="nombre">${response.name}</div>
+                        <img src="${response.sprites.front_default}" alt="" class="image">
+                        <input type = "text" id="pkm-${arrayid[i]}">
+                        <button id="btn-${arrayid[i]}" onclick="validar('${arrayid[i]}')">Verificar</button>
+                        </div>`;
+                    contenedor.innerHTML += tarjeta;
+                    globalData.push(response);
+                }
+                /*
+                let request = await fetch(""+id);
+                let response = await request.json();
+                let pokemon = response;
+
+                pokemon.name = "Otro Nombre";
+                console.log(response.name);
+                $(".nombre").textContent = pokemon.name;
+                $(".image").src = pokemon.sprites.front_default; */
+            }catch (error){
+                console.error("Se capturo el error: "+error);
+            }
+        }
+        let pokes = [];
+
+        for (let i=0; i<=9; i++){
+        	let random = Math.floor(Math.random() * 151) +1;
+        	pokes.push(random);
+        }
+        
+        
+        getDataPokemon(pokes);
+    </script>
+</body>
+</html>
