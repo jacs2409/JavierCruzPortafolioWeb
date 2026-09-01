@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<div class="contenedor">
+		
+	</div>
+
+	<script>
+
+		class itemList {
+			constructor(id, name){
+				this.id = id; 
+				this.name = name; 
+				this.status = false; 
+			}
+			changeStatus(){
+				this.status = !this.status; 
+			};
+		}
+
+		let data = [];
+		let $ = (id) => document.querySelector(id);
+		const contenedor = $(".contenedor");
+
+		function initData(arryList){
+			arryList.forEach((name, index) => {
+				let item = new itemList(index +1, name);
+				data.push(item);
+			});
+			renderizar(); 
+		}
+
+		function renderizar(arryList){
+			contenedor.innerHTML = ""; 
+			data.forEach(element => {
+				contenedor.innerHTML += `
+					<div>
+						<span>${element.id}</span>
+						<p>${element.name}</p>
+						${element.status ? `<button onclick="cambiarStatus('${element.id}')">Comprado</button>` : `<button onclick="cambiarStatus('${element.id}')">Comprar</button>`}
+					</div>
+				`
+			});
+		}
+
+		function cambiarStatus(id) {
+			data.forEach(element => {
+				if(element.id == id){
+					element.changeStatus();
+				}
+			});	
+			renderizar();
+		}
+
+		initData(["2 manzanas", "Cereal", "Yougurt"])
+	</script>
+</body>
+</html>
